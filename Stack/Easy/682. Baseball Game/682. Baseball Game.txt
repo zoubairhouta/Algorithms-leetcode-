@@ -1,0 +1,24 @@
+Problem Explanation:
+You are given a list of operations.
+Each operation can be:
+An integer x: You need to add x to the record.
+"+": You need to add a new score that is the sum of the previous two scores.
+"D": You need to add a new score that is double the previous score.
+"C": You need to remove the previous score from the record.
+The goal is to return the sum of all the scores on the record after applying all the operations.
+Solution Approach Using Stack:
+Initialize a Stack: Start with an empty stack to keep track of the scores.
+
+Process Each Operation:
+
+If the operation is an integer (x), push it onto the stack.
+If the operation is "+", pop the top two scores, sum them, and push the sum back onto the stack.
+If the operation is "D", peek at the top score, double it, and push the doubled value onto the stack.
+If the operation is "C", pop the top score from the stack.
+Calculate the Final Score: After processing all operations, the stack contains the valid scores. The final score is the sum of all elements in the stack.
+
+Lessons from the Problem:
+Understanding Stack Operations: This problem is a good exercise in understanding how stacks work, particularly in scenarios where the order of elements matters.
+Applying Conditional Logic: Handling different types of operations requires conditional logic, a fundamental concept in programming.
+Dynamic Data Handling: It shows how to handle data that changes over time with a sequence of operations.
+Efficient Data Access: The problem demonstrates efficient data access and manipulation using stacks, particularly when only the most recent elements need to be accessed or modified.
