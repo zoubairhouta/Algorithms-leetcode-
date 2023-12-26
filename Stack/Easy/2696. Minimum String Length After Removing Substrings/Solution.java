@@ -11,6 +11,7 @@ public class Solution {
                 stack.push(ch); // Add the character to the stack
             }
         }
+        // ya3tek 3asba algo
 
         return stack.size();
     }
