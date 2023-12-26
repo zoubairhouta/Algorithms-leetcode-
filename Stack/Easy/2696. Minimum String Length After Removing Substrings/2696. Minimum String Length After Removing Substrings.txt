@@ -1,0 +1,33 @@
+To solve this problem, we need to repeatedly find and remove occurrences of the substrings "AB" or "CD" from the given string s until no more such substrings exist. The goal is to minimize the length of the resulting string.
+
+Let's break down the steps:
+
+Find Occurrences of "AB" or "CD": We need to scan through the string to find occurrences of "AB" or "CD".
+
+Remove Substrings: Once an occurrence is found, we remove it from the string. This can potentially create new "AB" or "CD" substrings.
+
+Repeat the Process: After removing a substring, we need to scan the string again to see if new occurrences of "AB" or "CD" have been created. If so, we repeat the removal process.
+
+Stop When No More Occurrences: This process continues until we can no longer find any "AB" or "CD" substrings.
+
+Return the Length of the Resulting String: The length of the final string, after all possible removals, is our answer.
+
+The key here is to understand that each removal operation can affect the surrounding characters, potentially creating new "AB" or "CD" pairs. For instance, removing "AB" from "CABD" results in "CD", which is another removable pair.
+
+Example 1 Explained:
+Input: "ABFCACDB"
+Operation 1: Remove "AB" → "FCACDB"
+Operation 2: Remove "CD" → "FCAB"
+Operation 3: Remove "AB" → "FC"
+Output: Length is 2 ("FC")
+Example 2 Explained:
+Input: "ACBBD"
+There are no "AB" or "CD" substrings to remove.
+Output: Length is 5 ("ACBBD")
+Algorithm Complexity
+The worst-case complexity of this algorithm depends on the length of the string and the number of removal operations required. In the worst case, the algorithm might have to scan the entire string multiple times, leading to a complexity that's more than linear but generally less than quadratic relative to the length of the string.
+
+Constraints Handling
+Given that the string length is between 1 and 100, and consists only of uppercase English letters, the problem is well-constrained and can be solved efficiently within these bounds.
+
+The solution is efficient for the given constraint because even in the worst case (when many operations are needed), the maximum string length of 100 keeps the total number of operations and the time complexity within practical limits.
