@@ -25,6 +25,7 @@ public class CafeteriaSimulation {
                 noMatchCounter++;
             }
         }
+        // 9ana3acd
 
         return studentQueue.size();
     }
