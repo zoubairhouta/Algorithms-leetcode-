@@ -26,6 +26,7 @@ public class CafeteriaSimulation {
             }
         }
         // 9ana3acd
+        // commentaire ekher
 
         return studentQueue.size();
     }
